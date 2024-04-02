@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './Container.module.scss';
 
 interface Container {
   className?: string;
@@ -8,5 +7,5 @@ interface Container {
 }
 
 export const Container: React.FC<Container> = ({ className, children }) => {
-  return <div className={clsx(styles.Container, className)}>{children}</div>;
+  return <div className={clsx(`container max-w-[1440px] px-5`, className)}>{children}</div>;
 };
