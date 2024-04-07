@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       components: '/src/components',
-      styles: path.resolve(__dirname, './src/scss/styles.scss'),
+      styles: resolve(__dirname, './src/scss/styles.scss'),
     },
   },
 });
